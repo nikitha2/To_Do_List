@@ -29,4 +29,8 @@ public class MainViewModel extends AndroidViewModel {
     public LiveData<List<TaskEntry>> getTasks() {
         return tasks;
     }
+
+    public void deleteTask(TaskEntry taskEntry) {
+        tasksRepository.deleteTasks(taskEntry);
+    }
 }

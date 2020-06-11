@@ -1,6 +1,7 @@
 package com.nikitha.android.roomdatapersistance.database;
 
 import android.content.Context;
+import android.util.Log;
 
 import java.util.List;
 
@@ -17,12 +18,19 @@ public class TasksRepository  {
 
 
     public LiveData<List<TaskEntry>> getloadAllTasks() {
+        Log.d(LOG_TAG,"-------------getloadAllTasks: data fetched from database");
         tasks = database.taskDao().loadAllTasks();
         return tasks;
     }
 
 
     public LiveData<TaskEntry> getloadTaskById(int taskId) {
-         return database.taskDao().loadTaskById(taskId);
+        Log.d(LOG_TAG,"-------------------getloadTaskById: data fetched from database for id");
+        return database.taskDao().loadTaskById(taskId);
+    }
+
+    public void deleteTasks(TaskEntry taskEntry) {
+        Log.d(LOG_TAG,"-------------------getloadTaskById: data deleted from database "+taskEntry);
+        database.taskDao().deleteTask(taskEntry);
     }
 }
