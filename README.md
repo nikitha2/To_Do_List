@@ -44,7 +44,7 @@ make sure you have the below dependencies in build.gradle.app file
 <br/>androidTestImplementation 'com.android.support.test:rules:1.0.2'
 
 ## Final App
-https://youtu.be/6QkPjx1Y3nA
+
 
 ## License
-MiwokApp is distributed under the MIT license.
+To_Do_List is distributed under the MIT license.
