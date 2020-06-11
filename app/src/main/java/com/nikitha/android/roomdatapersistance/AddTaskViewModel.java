@@ -27,7 +27,6 @@ public class AddTaskViewModel extends ViewModel {
     }
 
     public void updateTask(TaskEntry task) {
-
         tasksRepository.updateTaskById(task);
     }
 }
