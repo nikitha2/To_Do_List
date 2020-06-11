@@ -19,13 +19,13 @@ make sure you have the below dependencies in build.gradle.app file
 <br/> implementation fileTree(dir: 'libs', include: ['*.jar'])
 <br/> implementation 'com.android.support:appcompat-v7:29.0.0'
 <br/> 
-<br/>   // Add RecyclerView dependency; must match SDK version
+<br/>   //  RecyclerView dependency; must match SDK version
 <br/> implementation 'com.android.support:recyclerview-v7:29.0.0'
 
-<br/>// Add FAB dependency
+<br/>//  FAB dependency
 <br/>implementation 'com.android.support:design:29.0.0'
 <br/>
-<br/> // COMPLETED (1) Add Room dependencies
+<br/>// Room dependencies
 <br/> implementation "android.arch.persistence.room:runtime:1.1.1"
 <br/> implementation 'androidx.recyclerview:recyclerview:1.1.0'
 <br/> implementation 'com.google.android.material:material:1.1.0'
