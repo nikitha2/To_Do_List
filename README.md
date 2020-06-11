@@ -1,11 +1,11 @@
 # To_Do_List
 RoomDataPersistance
   topicsCovered:
-    - Room
-    - ModelView
-    - Excecutor
-    - LiveData
-    - ViewModelFactory
+    <br/>- Room
+    <br/>- ModelView
+    <br/>- Excecutor
+    <br/>- LiveData
+    <br/>- ViewModelFactory
 
 Pre-requisites
 --------------
