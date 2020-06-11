@@ -59,7 +59,7 @@ public class AddTaskActivity extends AppCompatActivity {
 
     // Member variable for the Database
     private AppDatabase mDb;
-
+    AddTaskViewModel viewModel;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_task);
@@ -78,7 +78,7 @@ public class AddTaskActivity extends AppCompatActivity {
             if (mTaskId == DEFAULT_TASK_ID) {
                 mTaskId = intent.getIntExtra(EXTRA_TASK_ID, DEFAULT_TASK_ID);
                 AddTaskViewModelFactory factory = new AddTaskViewModelFactory(mDb, mTaskId);
-                final AddTaskViewModel viewModel = ViewModelProviders.of(this, factory).get(AddTaskViewModel.class);
+                viewModel = ViewModelProviders.of(this, factory).get(AddTaskViewModel.class);
                 viewModel.getTask().observe(this, new Observer<TaskEntry>() {
                     @Override
                     public void onChanged(TaskEntry taskEntry) {
@@ -150,7 +150,8 @@ public class AddTaskActivity extends AppCompatActivity {
                 } else {
                     //update task
                     task.setId(mTaskId);
-                    mDb.taskDao().updateTask(task);
+                    viewModel.updateTask(task);
+//                    mDb.taskDao().updateTask(task);
                 }
                 finish();
             }

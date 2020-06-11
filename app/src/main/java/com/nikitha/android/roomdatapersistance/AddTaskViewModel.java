@@ -25,4 +25,9 @@ public class AddTaskViewModel extends ViewModel {
     public LiveData<TaskEntry> getTask() {
         return task;
     }
+
+    public void updateTask(TaskEntry task) {
+
+        tasksRepository.updateTaskById(task);
+    }
 }

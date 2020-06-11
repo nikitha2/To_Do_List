@@ -33,4 +33,8 @@ public class TasksRepository  {
         Log.d(LOG_TAG,"-------------------getloadTaskById: data deleted from database "+taskEntry);
         database.taskDao().deleteTask(taskEntry);
     }
+
+    public void updateTaskById(TaskEntry task) {
+        database.taskDao().updateTask(task);
+    }
 }
