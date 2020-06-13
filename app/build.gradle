@@ -23,7 +23,7 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'com.android.support:appcompat-v7:29.0.0'
+    testImplementation 'com.android.support:appcompat-v7:29.0.0'
 
     // Add RecyclerView dependency; must match SDK version
     implementation 'com.android.support:recyclerview-v7:29.0.0'
@@ -35,11 +35,14 @@ dependencies {
     implementation "android.arch.persistence.room:runtime:1.1.1"
     implementation 'androidx.recyclerview:recyclerview:1.1.0'
     implementation 'com.google.android.material:material:1.1.0'
+    implementation 'junit:junit:4.12'
     annotationProcessor "android.arch.persistence.room:compiler:1.1.1"
+    testImplementation "androidx.room:room-testing:2.2.5"
 
     //liveData
     implementation "android.arch.lifecycle:extensions:1.1.1"
-    annotationProcessor "android.arch.lifecycle:compiler:1.1.1"
+   // annotationProcessor "android.arch.lifecycle:compiler:1.1.1"
+    annotationProcessor "androidx.lifecycle:lifecycle-common-java8:2.2.0"
 
     // Testing
     // Instrumentation dependencies use androidTestImplementation
