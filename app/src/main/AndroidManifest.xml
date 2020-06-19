@@ -12,10 +12,11 @@
         tools:ignore="GoogleAppIndexingWarning">
 
         <!-- The manifest entry for the MainActivity -->
-        <activity android:name="com.nikitha.android.roomdatapersistance.MainActivity">
+        <activity
+            android:name="com.nikitha.android.roomdatapersistance.MainActivity"
+            android:launchMode="singleTop">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -23,9 +24,9 @@
         <!-- AddTaskActivity -->
         <activity
             android:name="com.nikitha.android.roomdatapersistance.AddTaskActivity"
+            android:launchMode="singleTop"
             android:label="@string/add_task_activity_name"
             android:parentActivityName=".MainActivity"/>
-
     </application>
 
 </manifest>
